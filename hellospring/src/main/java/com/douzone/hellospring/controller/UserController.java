@@ -1,0 +1,14 @@
+package com.douzone.hellospring.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+@Controller
+public class UserController {
+	
+	@ResponseBody
+	@RequestMapping("/usr/joinform")
+	public String joinform() {
+		return "UserController:joinform";
+	}
+}
