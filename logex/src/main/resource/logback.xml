@@ -10,15 +10,15 @@
 		</encoder>
 	</appender>
 
-	<appender name="fileAppender2" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/logex/logex2.log</file>
+	<appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>>/log-mysite/mysite.log</file>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 			<Pattern>
 				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
 			</Pattern>
 		</encoder>
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>/logex/logex2.%i.log.zip</FileNamePattern>
+			<FileNamePattern>/log-mysite/mysite.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>10</MaxIndex>
 		</rollingPolicy>
@@ -63,7 +63,7 @@
     </logger>    
 	
 	<!-- 루트(글로벌) 로거 -->
-	<root level="warn">
+	<root level="debug">
 		<appender-ref ref="consoleAppender" />
 	</root>
 
