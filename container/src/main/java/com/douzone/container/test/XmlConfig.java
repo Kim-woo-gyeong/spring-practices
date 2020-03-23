@@ -18,13 +18,13 @@ public class XmlConfig {
 		//xml Auto Configuration(Annotation Scanning)
 		//		testBeanFactory01();
 		
-		//xml bean Configuration(Implicity Configuration)
+		//xml bean Configuration(explicity Configuration)
 		//		testBeanFactory02();
 		
 		//xml Auto Configuration(Annotation Scanning)
 		//		testApplicationContext01();
 		
-		//xml bean Configuration(Implicity Configuration)
+		//xml bean Configuration(explicity Configuration)
 		testApplicationContext02();
 	}
 	
@@ -43,7 +43,7 @@ public class XmlConfig {
 	
 	public static void testBeanFactory02() {
 		
-		//xml bean Configuration(Implicity Configuration)
+		//xml bean Configuration(explicity Configuration)
 		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("config/user/applicationContext02.xml")); //연습용
 		//bean 생성
 		User1 user1 = bf.getBean(User1.class);
@@ -72,7 +72,7 @@ public class XmlConfig {
 	
 	public static void testApplicationContext02() {
 		
-		//xml bean Configuration(Implicity Configuration)
+		//xml bean Configuration(Explicity Configuration)
 		ApplicationContext ac = new ClassPathXmlApplicationContext("config/user/applicationContext02.xml");
 		
 		// id로 빈 가져오기
