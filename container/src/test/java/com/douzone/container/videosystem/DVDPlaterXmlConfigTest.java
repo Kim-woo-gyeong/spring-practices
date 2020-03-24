@@ -66,7 +66,6 @@ public class DVDPlaterXmlConfigTest {
 	private DVDPack dvdPack;
 	
 	/*---------------------------------------*/
-	
 	@Autowired
 	@Qualifier("dvdPlayer2")
 	private DVDPlayer player2;
@@ -74,6 +73,7 @@ public class DVDPlaterXmlConfigTest {
 	@Autowired
 	@Qualifier("dvdPlayer3")
 	private DVDPlayer player3;
+
 	
 	@Autowired
 	@Qualifier("dvdPlayer4")

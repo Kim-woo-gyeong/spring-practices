@@ -139,7 +139,7 @@
 	<!-- 15. 프로퍼티를 통한 빈 주입1 -->
 	<bean id = "dvdPlayer5" 
 	      class ="com.douzone.container.videosystem.DVDPlayer" >
-	 	<property name="dvd" ref = "avengersDirectorEdition" />     
+	 	<property name="dvd" ref = "avengersDirectorEdition" />    
 	 </bean>
 	 
 	 <!-- 16. 프로퍼티를 통한 빈 주입 2 - p:namespace 사용 -->
