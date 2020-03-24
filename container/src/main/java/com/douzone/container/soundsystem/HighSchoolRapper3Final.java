@@ -1,7 +1,5 @@
 package com.douzone.container.soundsystem;
 
-import javax.inject.Named;
-
 import org.springframework.stereotype.Component;
 
 //@Component("HSRapper3Final")

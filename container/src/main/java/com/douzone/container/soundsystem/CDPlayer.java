@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //암시적이기 때문에 붙어있어야 함.
 public class CDPlayer {
 
 	// wiring 01 : 바이너리 주입(CGLib)
