@@ -17,7 +17,6 @@ public class DVDPlayer {
 	}
 
 	public void play() {
-		System.out.println("DVDPlayer Play");
 		dvd.play();
 	}
 }

@@ -39,6 +39,32 @@ public class DVDPlaterXmlConfigTest {
 	@Qualifier("avergersAgeOfUltron")
 	private DigitalVideoDisc dvd5;
 	
+	@Autowired
+	@Qualifier("captainAmerica")
+	private DigitalVideoDisc dvd6;
+	
+	@Autowired
+	@Qualifier("avengersDirectorEdition")
+	private DigitalVideoDisc dvd7;
+	
+	@Autowired
+	@Qualifier("avengersExpansionPack1")
+	private DigitalVideoDisc dvd8;
+	
+	@Autowired
+	@Qualifier("avengersExpansionPack2")
+	private DigitalVideoDisc dvd9;
+	
+	@Autowired
+	@Qualifier("avengersExpansionPack3")
+	private DigitalVideoDisc dvd10;
+	
+	/*---------------------------------------*/
+	
+	@Autowired
+	@Qualifier("avengersTriplepack")
+	private DVDPack dvdPack;
+	
 	/*---------------------------------------*/
 	
 	@Autowired
@@ -52,6 +78,14 @@ public class DVDPlaterXmlConfigTest {
 	@Autowired
 	@Qualifier("dvdPlayer4")
 	private DVDPlayer player4;
+	
+	@Autowired
+	@Qualifier("dvdPlayer5")
+	private DVDPlayer player5;
+	
+	@Autowired
+	@Qualifier("dvdPlayer6")
+	private DVDPlayer player6;
 	
 	/*---------------------------------------*/
 	
@@ -74,6 +108,53 @@ public class DVDPlaterXmlConfigTest {
 	public void testDVD5NotNull() {
 		assertNotNull(dvd5);
 	}
+	
+	@Test
+	public void testDVD6NotNull() {
+		assertNotNull(dvd6);
+		System.out.println(dvd6);
+		assertEquals("BlankDisc [title=Avengers Captain America, studio=MARVEL, actors=null]", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
+	}
+	
+	@Test
+	public void testDVD7NotNull() {
+		assertNotNull(dvd7);
+		System.out.println(dvd7);
+		assertEquals("BlankDisc [title=Avengers Driector's Editor, studio=MARVEL, actors=[Robert Downey, Scallet, Chris]]", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
+		
+	}
+	
+	@Test
+	public void testDVD8NotNull() {
+		assertNotNull(dvd8);
+		System.out.println(dvd8);
+		assertEquals("BlankDisc [title=Avengers Expansion Pack, studio=MARVEL, actors=[Robert Downey, Scallet, Chris]]", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
+		
+	}
+	
+	@Test
+	public void testDVD9NotNull() {
+		assertNotNull(dvd9);
+		System.out.println(dvd9);
+		assertEquals("BlankDisc [title=Avengers Expansion Pack2, studio=MARVEL, actors=[Robert Downey, Scallet, Chris]]", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
+		
+	}
+	
+	@Test
+	public void testDVD10NotNull() {
+		assertNotNull(dvd10);
+		System.out.println(dvd10);
+		assertEquals("BlankDisc [title=Avengers Expansion Pack3, studio=MARVEL, actors=[Robert Downey, Scallet, Chris]]", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
+		
+	}
+	
+	@Test
+	public void testDVDPack() {
+		assertNotNull(dvdPack);
+		System.out.println(dvdPack);
+				
+	}
+	
 	@Test
 	public void testPlay2() {
 		player2.play();
@@ -90,5 +171,17 @@ public class DVDPlaterXmlConfigTest {
 	public void testPlay4() {
 		player4.play();
 		assertEquals("Playing Movie MARVEL's IronMan", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
+	}
+	
+	@Test
+	public void testPlay5() {
+		player5.play();
+		assertEquals("Playing Movie MARVEL's Avengers Driector's Editor", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
+	}
+	
+	@Test
+	public void testPlay6() {
+		player6.play();
+		assertEquals("Playing Movie MARVEL's Avengers Captain America", systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
 	}
 }
